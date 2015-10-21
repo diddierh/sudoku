@@ -1,0 +1,56 @@
+*{
+	box-sizing: border-box;
+}
+
+.cont{
+	background-image: url("../images/dark.png");
+	background-color: #2f2f2f;
+}
+.square, .board{
+	border: solid black 1px;
+}
+
+.board{
+	background-color: #ffffff;
+}
+
+.square > div{
+	border: solid gray 1px;
+	font-weight: 600;
+	font-family: sans-serif;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+.cell{
+	background-color: #efefef;
+}
+.cell:hover{
+	background-color: #fff;	
+}
+
+.fixed, .fixed:hover{
+	background-color: #afafaf;
+}
+
+
+
+.fixed-cont{
+	background-color: rgba(125,125,125,.7);
+}
+
+
+@media screen and (max-aspect-ratio: 1/1){
+	.square > div{
+		font-size: calc( 10vw );
+	}
+
+}
+
+@media screen and (min-aspect-ratio: 1/1){
+	.square > div{
+		font-size: calc( 10vh );
+	}
+
+}
