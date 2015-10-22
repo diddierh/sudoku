@@ -10,11 +10,11 @@ function pickNumber(node){
 }
 
 function displayNumberChooser(){
-	node = document.getElementsByClassName("fixed-cont")[0];
+	node = document.getElementsByClassName("placeholder")[0];
 	node.style["display"]="flex";
 }
 
 function hideNumberChooser(){
-	node = document.getElementsByClassName("fixed-cont")[0];
+	node = document.getElementsByClassName("placeholder")[0];
 	node.style["display"]="none";
 }

@@ -17,7 +17,7 @@
 .square > div{
 	border: solid gray 1px;
 	font-weight: 600;
-	font-family: sans-serif;
+	font-family: arcon;
 	margin: auto;
 	overflow: hidden;
 	text-align: center;
@@ -26,6 +26,7 @@
 .cell{
 	background-color: #efefef;
 }
+
 .cell:hover{
 	background-color: #fff;	
 }
@@ -34,16 +35,32 @@
 	background-color: #afafaf;
 }
 
+.number{
+	font-family: arcon;
+	text-align: center;
+	padding-top: 5%;
 
-
-.fixed-cont{
-	background-color: rgba(125,125,125,.7);
 }
 
+.placeholder{
+	background-color: rgba(48,48,48,.7);
+}
+
+.fixed-cont{
+	background-color: rgba(220,220,220,.7);
+	border-radius: 5%;
+}
+
+.header{
+	background-color: black;  
+}
 
 @media screen and (max-aspect-ratio: 1/1){
 	.square > div{
 		font-size: calc( 10vw );
+	}
+	.number{
+		font-size: 15vw;
 	}
 
 }
@@ -51,6 +68,9 @@
 @media screen and (min-aspect-ratio: 1/1){
 	.square > div{
 		font-size: calc( 10vh );
+	}
+	.number{
+		font-size: 15vh;
 	}
 
 }

@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
 	(link:css[href=css/reset.css]+link:css[href=css/position.css]+link:css[href=css/style.css]+script[src=js/main.js])
+	<link href="../fonts/arcon/Arcon-Rounded-Regular.otf">
 </head>
 <body>
-	div.cont>div.board>(div.square.$square>div[onClick=clickCell(this)].cell.cell$*9)*9
+	div.cont>(div.header+div.board>(div.square.$square>div[onClick=clickCell(this)].cell.cell$*9)*9)
 	div.fixed-cont>div[onclick=pickNumber(this)].number{$}*9
 </body>
 </html>
