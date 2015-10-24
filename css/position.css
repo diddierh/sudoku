@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 .cont{
 	position: absolute;
 	z-index: -1;
@@ -53,7 +57,13 @@
 	height: 33.333333333%;
 }
 
-
+.menu{
+	display: none;
+	margin-top: 10vh;
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+}
 
 @media screen and (max-aspect-ratio: 9/10){
 

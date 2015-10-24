@@ -1,10 +1,5 @@
-*{
-	box-sizing: border-box;
-}
-
 .cont{
-	background-image: url("../images/dark.png");
-	background-color: #2f2f2f;
+	background-color: #090914;
 }
 .square, .board{
 	border: solid black 1px;
@@ -53,6 +48,10 @@
 
 .header{
 	background-color: black;  
+}
+
+.menu{
+	background-color: #040409;
 }
 
 @media screen and (max-aspect-ratio: 1/1){

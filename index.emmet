@@ -9,7 +9,8 @@
 	<link href="../fonts/arcon/Arcon-Rounded-Regular.otf">
 </head>
 <body>
-	div.cont>(div.header+div.board>(div.square.$square>div[onClick=clickCell(this)].cell.cell$*9)*9)
-	div.fixed-cont>div[onclick=pickNumber(this)].number{$}*9
+	.placeholder>.fixed-cont>.number[onclick=pickNumber(this)]{$}*9
+	.cont>.flexb>.header[onclick=clickMenu()]+.board>(.square.$square>.cell.cell$[onclick=clickCell(this)]*9)*9
+	.menu
 </body>
 </html>
