@@ -16,6 +16,8 @@
 	margin: auto;
 	overflow: hidden;
 	text-align: center;
+	font-size: 10vmin;/*remove this*/
+
 }
 
 .cell{
@@ -34,7 +36,6 @@
 	font-family: arcon;
 	text-align: center;
 	padding-top: 5%;
-
 }
 
 .placeholder{
@@ -47,29 +48,46 @@
 }
 
 .header{
-	background-color: black;  
+	background-color: black; 
+	z-index: 1;
+	border-bottom: 1px solid #101010;
+}
+
+.header > *{
+	font-size: 4vh;
+	font-family: arcon;
 }
 
 .menu{
 	background-color: #040409;
+	overflow: scroll;
 }
 
-@media screen and (max-aspect-ratio: 1/1){
-	.square > div{
-		font-size: calc( 10vw );
-	}
+.header > *{
+	color: #efefef;
+}
+
+.options{
+	
+}
+
+.timer{
+	
+}
+@media screen and (max-aspect-ratio: 9/10){
 	.number{
 		font-size: 15vw;
 	}
-
 }
 
-@media screen and (min-aspect-ratio: 1/1){
-	.square > div{
-		font-size: calc( 10vh );
-	}
+@media screen and (min-aspect-ratio: 9/10){
 	.number{
 		font-size: 15vh;
 	}
-
+}
+@media screen and (max-height: 400px){
+	.header > * {
+		font-size: 5vh;
+		padding: 2.5vh;
+	}
 }

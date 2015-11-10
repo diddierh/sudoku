@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 
-	(link:css[href=css/reset.css]+link:css[href=css/position.css]+link:css[href=css/style.css]+script[src=js/main.js])
+	(link:css[href=css/base.css]+script[src=js/main.js])
 	<link href="../fonts/arcon/Arcon-Rounded-Regular.otf">
 </head>
 <body>

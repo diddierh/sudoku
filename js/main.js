@@ -1,3 +1,18 @@
+function getForbiddenItems(board, x, y){
+	//this method returns a "set" which contains the numbers which cannot be in a determined cell
+	var toReturn = new Array(9)
+		
+}
+
+function generateBoard(){
+	//this method returns the 9x9 array
+	var toReturn = new Array(9);
+	for(var i = 0; i < 9; i++){
+		toReturn[i] = new Array(9);
+	}
+	return toReturn;
+}
+
 function clickCell(node){
 	displayNumberChooser();	
 	document.clicked = node;
@@ -12,8 +27,8 @@ function displayNumberChooser(){
 	node = document.getElementsByClassName("placeholder")[0];
 	node.style["display"]="flex";
 }
-
 function hideNumberChooser(){
+
 	node = document.getElementsByClassName("placeholder")[0];
 	node.style["display"]="none";
 }

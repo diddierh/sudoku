@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/position.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/base.css">
 	<script src="js/main.js"></script>
 	<link href="../fonts/arcon/Arcon-Rounded-Regular.otf">
 
 </head>
 <body>
+	<div class="min-res">
+		<div>Se necesita que la resolución sea al menos 300x250 para poder jugar</div>
+	</div>
 	<div class="placeholder">
 		<div class="fixed-cont">
 			<div class="number" onclick="pickNumber(this)">1</div>
@@ -26,7 +28,12 @@
 	</div>
 	<div class="cont">
 		<div class="flexb">
-			<div class="header" onclick="clickMenu()"></div>
+			<div class="header" >
+				<div class="timer"><i class="fa fa-clock-o"></i> 00:06:00</div>
+				<div class="title">SUDOKU</div>
+				<div class="options" onclick="clickMenu()"><i class="fa fa-cog"></i> options</div>
+				
+			</div>
 			<div class="board">
 				<div class="square 1square">
 					<div class="cell cell1" onclick="clickCell(this)"></div>

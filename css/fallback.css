@@ -1,0 +1,28 @@
+.min-res{
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 4;
+	padding: 5vh;
+	font-family: arcon;
+	background-color: black;
+	color: #f8f8f8;
+	vertical-align: middle;
+}
+.min-res > *{
+	background-color: black;
+	width: 80%;
+	height: 80%;
+	overflow: hidden;
+	margin-left: 10%;
+	margin-top: 15%;
+	text-align: justify;
+	font-size: 7vmin;
+}
+
+@media screen and (max-width: 300px), (max-height: 250px) {
+	.min-res{
+		display: inline;
+	}
+}

@@ -1,0 +1,118 @@
+.cont{
+	position: absolute;
+	z-index: -1;
+}
+
+.flexb{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+
+}
+
+.header{
+	display: flex;
+	flex-wrap: nowrap;
+	height: 10vh;
+	width: 100vw;
+}
+
+.board{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square{
+	display: flex;
+	flex-wrap: wrap;
+	width: 33.33333333333%;
+	height: 33.33333333333%;
+}
+
+.fixed-cont{
+	display: flex;
+	flex-wrap: wrap;
+	width: 77.77777777777%;
+	height: 77.77777777777%;
+	margin-top: 11.1111111111%;
+	margin-left: 11.1111111111%;
+}
+
+.number{
+	width: 33.333333333333%;
+	height: 33.333333333333%;
+}
+
+.placeholder{
+	display: none;
+	position: absolute;
+}
+
+.square > div{
+	width: 33.333333333%;
+	height: 33.333333333%;
+}
+
+.menu{
+	display: none;
+	margin-top: 10vh;
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+}
+
+.header > *{
+	
+	height: 10vh;
+	display: inline-block;
+	padding: 3vh;
+	border-left: 2px solid #0a0a0a;
+	border-right: 2px solid #0a0a0a;
+	min-width: fit-content;
+	overflow: hidden;
+}
+
+.options{
+	float: right;
+}
+
+.title{
+	display: inline-block;
+	text-align: center;
+	clear: both;
+	border: 0px;
+	flex-grow: 1;
+}
+
+@media screen and (max-aspect-ratio: 9/10){
+
+	.board{
+		width: 100vw;
+		height: 100vw;
+	}
+
+	.placeholder{
+		width: 100vw;
+		height: 100vw;	
+		margin-top: calc( 10vh + ( ( 90vh - 100vw ) / 2 ) );
+	}
+
+}
+
+@media screen and (min-aspect-ratio: 9/10){
+
+	.board{
+		width: 90vh;
+		height: 90vh;
+	}
+
+	.placeholder{
+		width: 90vh;
+		height: 90vh;
+		margin-top: 10vh;
+		margin-left: calc( (100vw - 90vh ) / 2);
+	}
+
+}
