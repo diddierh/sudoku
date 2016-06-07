@@ -1,9 +1,0 @@
-//VISUAL
--5	set font-size responsive adecuatelly
--5	add icons to options and timer
--5	add an inferior border to header
--5	change display layout in very small screen resolutions( hide elements)
-
-//JS behavior
--5	ALL... to define properly
--5	on hover on a cell highlight line row and square it belongs
