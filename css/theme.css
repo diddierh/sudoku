@@ -12,7 +12,7 @@
 .square > div{
 	border: solid gray 1px;
 	font-weight: 600;
-	font-family: arcon;
+	font-family: arcon, sans-serif;
 	margin: auto;
 	overflow: hidden;
 	text-align: center;
@@ -33,7 +33,7 @@
 }
 
 .number{
-	font-family: arcon;
+	font-family: arcon, sans-serif;
 	text-align: center;
 	padding-top: 5%;
 }
@@ -55,12 +55,12 @@
 
 .header > *{
 	font-size: 4vh;
-	font-family: arcon;
+	font-family: arcon, sans-serif;
 }
 
 .menu{
 	background-color: #040409;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .header > *{
@@ -71,8 +71,12 @@
 	
 }
 
-.timer{
-	
+.timer, .options{
+	width: 7.4em;
+}
+
+.count{
+	overflow: hidden;
 }
 @media screen and (max-aspect-ratio: 9/10){
 	.number{

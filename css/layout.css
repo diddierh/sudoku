@@ -1,6 +1,7 @@
 .cont{
 	position: absolute;
 	z-index: -1;
+	width: 100%;
 }
 
 .flexb{
@@ -70,7 +71,6 @@
 	padding: 3vh;
 	border-left: 2px solid #0a0a0a;
 	border-right: 2px solid #0a0a0a;
-	min-width: fit-content;
 	overflow: hidden;
 }
 
