@@ -1,3 +1,5 @@
+
+
 .cont{
 	position: absolute;
 	z-index: -1;
@@ -98,7 +100,9 @@
 		height: 100vw;	
 		margin-top: calc( 10vh + ( ( 90vh - 100vw ) / 2 ) );
 	}
-
+	.text{
+		display: none;
+	}
 }
 
 @media screen and (min-aspect-ratio: 9/10){
@@ -114,5 +118,8 @@
 		margin-top: 10vh;
 		margin-left: calc( (100vw - 90vh ) / 2);
 	}
-
+	
+	.timer{
+		min-width: 7.4em;
+	}
 }

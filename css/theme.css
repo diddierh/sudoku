@@ -1,3 +1,5 @@
+@import "fonts.css";
+
 .cont{
 	background-color: #090914;
 }
@@ -65,6 +67,7 @@
 
 .header > *{
 	color: #efefef;
+	text-overflow: ellipsis;
 }
 
 .options{
@@ -72,7 +75,7 @@
 }
 
 .timer, .options{
-	width: 7.4em;
+	max-width: 7.4em;
 }
 
 .count{
