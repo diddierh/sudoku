@@ -1,4 +1,1 @@
-@font-face {
-	font-family: "arcon";
-	src: url("../fonts/arcon/Arcon-Rounded-Regular.otf");
-}
+@import "../fonts/arcon/stylesheet.css";

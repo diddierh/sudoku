@@ -1,60 +1,66 @@
-		function getTwoDigitNumber(number){
-			if(number < 10){
-				number = "0" + number;
-			}
-			return number;
+var myWorker;
+var time;
 
+function getTwoDigitNumber(number){
+	if(number < 10){
+		number = "0" + number;
+	}
+	return number;
+
+}
+
+function getPrintableTime(miliseconds){
+	var seconds = Math.floor(miliseconds / 1000)
+	var hours;
+	var minutes;
+	var secs;
+
+	secs	= seconds - Math.floor(seconds/60)*60;
+	minutes	= Math.floor(seconds/60)%60;
+	hours = Math.floor(seconds/3600);
+	
+	return getTwoDigitNumber(hours) + ":" + getTwoDigitNumber(minutes) + ":" + getTwoDigitNumber(secs);
+}
+
+
+var storageManager = (function(){
+	function save(value){
+		localStorage.setItem("ms", value);
+	}
+	function load(){
+		if(localStorage.getItem("ms") != null){
+			return Number(localStorage.getItem("ms"));
 		}
-
-		function getPrintableTime(seconds){
-			var hours;
-			var minutes;
-			var secs;
-
-			secs	= seconds - Math.floor(seconds/60)*60;
-			minutes	= Math.floor(seconds/60)%60;
-			hours = Math.floor(seconds/3600);
-			
-			return getTwoDigitNumber(hours) + ":" + getTwoDigitNumber(minutes) + ":" + getTwoDigitNumber(secs);
+		else{
+			return 0;
 		}
+	}
 
-		var timer = (function(){
-			var seconds = 0;
+	return {
+		save: save,
+		load: load
+	};
+})();
 
+window.onload = function(){
+	myWorker = new Worker("js/worker-timer.js");
 
-			function inc(){
-				seconds++;
-				return seconds;
-			}
+	time = storageManager.load();
+	var timerElement = document.getElementsByClassName("count")[0];
+	timerElement.innerHTML = getPrintableTime(time);
+	
+	myWorker.postMessage(["SET", time]);
 
-			function reset(){
-				return seconds = 0;
-			}
+	myWorker.onmessage = function(e){
+		time = e.data;
+		timerElement.innerHTML = getPrintableTime(time);
+	}
 
-			function set(number){
-				seconds = number;
-			}
+	myWorker.postMessage(["START"]);
 
-			return {
-				increment:	inc,
-				reset:		reset,
-				set:		set
-			};
-		})();
+	window.onunload = function(){
+		storageManager.save(time);
+		myWorker.postMessage(["STOP"]);
+	}
+};
 
-		window.onload = function(){
-			var s = localStorage.getItem("timer") || 0;
-			timer.set(s);
-		}
-
-		window.onunload = function(){
-			localStorage.setItem("timer",timer.increment());
-		}
-
-		setInterval(count, 10);
-
-		function count(){
-			var t = document.getElementsByClassName("count")[0];
-			t.innerHTML = getPrintableTime(Math.floor(timer.increment()/100));
-
-		};
